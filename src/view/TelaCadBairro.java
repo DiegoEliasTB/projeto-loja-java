@@ -5,7 +5,6 @@
  */
 package view;
 
-import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
@@ -13,81 +12,13 @@ import javax.swing.JTextField;
  *
  * @author house
  */
-public class TelaCadCidade extends javax.swing.JFrame {
+public class TelaCadBairro extends javax.swing.JFrame {
 
     /**
      * Creates new form FormModeloCadastros
      */
-    public TelaCadCidade() {
+    public TelaCadBairro() {
         initComponents();
-    }
-
-    public JButton getjButtonBuscar() {
-        return jButtonBuscar;
-    }
-
-    public void setjButtonBuscar(JButton jButtonBuscar) {
-        this.jButtonBuscar = jButtonBuscar;
-    }
-
-    public JButton getjButtonCancelar() {
-        return jButtonCancelar;
-    }
-
-    public void setjButtonCancelar(JButton jButtonCancelar) {
-        this.jButtonCancelar = jButtonCancelar;
-    }
-
-    public JButton getjButtonGravar() {
-        return jButtonGravar;
-    }
-
-    public void setjButtonGravar(JButton jButtonGravar) {
-        this.jButtonGravar = jButtonGravar;
-    }
-
-    public JButton getjButtonNovo() {
-        return jButtonNovo;
-    }
-
-    public void setjButtonNovo(JButton jButtonNovo) {
-        this.jButtonNovo = jButtonNovo;
-    }
-
-    public JButton getjButtonSair() {
-        return jButtonSair;
-    }
-
-    public void setjButtonSair(JButton jButtonSair) {
-        this.jButtonSair = jButtonSair;
-    }
-
-    public JTextField getjTFIdCidade() {
-        return jTFIdCidade;
-    }
-
-    public void setjTFIdCidade(JTextField jTFIdCidade) {
-        this.jTFIdCidade = jTFIdCidade;
-    }
-
-    public JTextField getjTFNomeCidade() {
-        return jTFNomeCidade;
-    }
-
-    public void setjTFNomeCidade(JTextField jTFNomeCidade) {
-        this.jTFNomeCidade = jTFNomeCidade;
-    }
-
-    public JTextField getjTFUF() {
-        return jTFUF;
-    }
-
-    public void setjTFUF(JTextField jTFUF) {
-        this.jTFUF = jTFUF;
-    }
-
-    public JPanel getjPanelDados() {
-        return jPanelDados;
     }
 
     /**
@@ -102,12 +33,10 @@ public class TelaCadCidade extends javax.swing.JFrame {
         jPanelTitulo = new javax.swing.JPanel();
         jLabelTitulo = new javax.swing.JLabel();
         jPanelDados = new javax.swing.JPanel();
-        jLId = new javax.swing.JLabel();
-        jTFIdCidade = new javax.swing.JTextField();
+        jTFIdBairro = new javax.swing.JTextField();
+        jTFNomeBairro = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jTFNomeCidade = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jTFUF = new javax.swing.JTextField();
         jPanelBotoes = new javax.swing.JPanel();
         jButtonNovo = new javax.swing.JButton();
         jButtonCancelar = new javax.swing.JButton();
@@ -126,7 +55,7 @@ public class TelaCadCidade extends javax.swing.JFrame {
         jLabelTitulo.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabelTitulo.setForeground(new java.awt.Color(51, 0, 153));
         jLabelTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelTitulo.setText("Cidades");
+        jLabelTitulo.setText("Cadastro de bairro");
 
         javax.swing.GroupLayout jPanelTituloLayout = new javax.swing.GroupLayout(jPanelTitulo);
         jPanelTitulo.setLayout(jPanelTituloLayout);
@@ -143,52 +72,43 @@ public class TelaCadCidade extends javax.swing.JFrame {
 
         jPanelDados.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jLId.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLId.setText("Id");
+        jTFIdBairro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTFIdBairroActionPerformed(evt);
+            }
+        });
 
-        jTFIdCidade.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        jLabel1.setText("Código");
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel2.setText("* Nome");
-
-        jLabel3.setText("UF");
+        jLabel2.setText("Nome do bairro");
 
         javax.swing.GroupLayout jPanelDadosLayout = new javax.swing.GroupLayout(jPanelDados);
         jPanelDados.setLayout(jPanelDadosLayout);
         jPanelDadosLayout.setHorizontalGroup(
             jPanelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelDadosLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addGap(23, 23, 23)
                 .addGroup(jPanelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTFNomeCidade, javax.swing.GroupLayout.DEFAULT_SIZE, 466, Short.MAX_VALUE)
-                    .addGroup(jPanelDadosLayout.createSequentialGroup()
-                        .addGroup(jPanelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLId)
-                            .addComponent(jTFIdCidade, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 411, Short.MAX_VALUE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jTFIdBairro, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
+                .addGap(62, 62, 62)
                 .addGroup(jPanelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTFUF, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
-                .addGap(22, 22, 22))
+                    .addComponent(jLabel2)
+                    .addComponent(jTFNomeBairro, javax.swing.GroupLayout.PREFERRED_SIZE, 346, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(69, Short.MAX_VALUE))
         );
         jPanelDadosLayout.setVerticalGroup(
             jPanelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelDadosLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLId)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTFIdCidade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(23, 23, 23)
                 .addGroup(jPanelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3))
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTFNomeCidade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTFUF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jTFIdBairro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTFNomeBairro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(39, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanelDados, java.awt.BorderLayout.CENTER);
@@ -199,15 +119,12 @@ public class TelaCadCidade extends javax.swing.JFrame {
         jButtonNovo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/New document.png"))); // NOI18N
         jButtonNovo.setText("Novo");
         jButtonNovo.setPreferredSize(new java.awt.Dimension(100, 30));
-        jButtonNovo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonNovoActionPerformed(evt);
-            }
-        });
         jPanelBotoes.add(jButtonNovo);
 
         jButtonCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Cancel.png"))); // NOI18N
         jButtonCancelar.setText("Cancelar");
+        jButtonCancelar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jButtonCancelar.setEnabled(false);
         jButtonCancelar.setPreferredSize(new java.awt.Dimension(100, 30));
         jPanelBotoes.add(jButtonCancelar);
 
@@ -238,9 +155,9 @@ public class TelaCadCidade extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButtonNovoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNovoActionPerformed
+    private void jTFIdBairroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTFIdBairroActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonNovoActionPerformed
+    }//GEN-LAST:event_jTFIdBairroActionPerformed
 
     private void jButtonGravarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGravarActionPerformed
         // TODO add your handling code here:
@@ -290,15 +207,53 @@ public class TelaCadCidade extends javax.swing.JFrame {
     private javax.swing.JButton jButtonGravar;
     private javax.swing.JButton jButtonNovo;
     private javax.swing.JButton jButtonSair;
-    private javax.swing.JLabel jLId;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabelTitulo;
     private javax.swing.JPanel jPanelBotoes;
     private javax.swing.JPanel jPanelDados;
     private javax.swing.JPanel jPanelTitulo;
-    private javax.swing.JTextField jTFIdCidade;
-    private javax.swing.JTextField jTFNomeCidade;
-    private javax.swing.JTextField jTFUF;
+    private javax.swing.JTextField jTFIdBairro;
+    private javax.swing.JTextField jTFNomeBairro;
     // End of variables declaration//GEN-END:variables
+
+    public javax.swing.JButton getjButtonBuscar() {
+        return jButtonBuscar;
+    }
+
+    public javax.swing.JButton getjButtonCancelar() {
+        return jButtonCancelar;
+    }
+
+    public javax.swing.JButton getjButtonGravar() {
+        return jButtonGravar;
+    }
+
+    public javax.swing.JButton getjButtonNovo() {
+        return jButtonNovo;
+    }
+
+    public javax.swing.JButton getjButtonSair() {
+        return jButtonSair;
+    }
+    
+    public void setjTFNomeCidade(JTextField jTFNomeBairro) {
+        this.jTFNomeBairro = jTFNomeBairro;
+    }
+    
+    public JTextField getjTFNomeBairro() {
+        return jTFNomeBairro;
+    }
+    
+    public JPanel getjPanelDados() {
+        return jPanelDados;
+    }
+    
+    public JTextField getjTFIdBairro() {
+        return jTFIdBairro;
+    }
+
+    public void setjTFIdBairro(JTextField jTFIdBAirro) {
+        this.jTFIdBairro = jTFIdBAirro;
+    }
 }

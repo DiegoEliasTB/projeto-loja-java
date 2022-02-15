@@ -8,6 +8,7 @@ package view;
 import controller.ControllerCadBairro;
 import controller.ControllerCadCidade;
 import controller.ControllerCadCliente;
+import controller.ControllerCadEndereco;
 
 /**
  *
@@ -35,6 +36,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem5 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
@@ -55,6 +57,14 @@ public class MenuPrincipal extends javax.swing.JFrame {
             }
         });
         jMenu2.add(jMenuItem1);
+
+        jMenuItem5.setText("Endereço");
+        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem5ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem5);
 
         jMenuItem4.setText("Bairro");
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
@@ -114,12 +124,18 @@ public class MenuPrincipal extends javax.swing.JFrame {
         ControllerCadCliente controllerCadCliente = new ControllerCadCliente(telaCadCliente);
         telaCadCliente.setVisible(true);
     }//GEN-LAST:event_jMenuItem3ActionPerformed
-
+    
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
         TelaCadBairro telaCadBairro = new TelaCadBairro();
         ControllerCadBairro controllerCadBairro = new ControllerCadBairro(telaCadBairro);
         telaCadBairro.setVisible(true);
     }//GEN-LAST:event_jMenuItem4ActionPerformed
+
+    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+        TelaCadEndereco telaCadEndereco = new TelaCadEndereco();
+        ControllerCadEndereco controllerCadEndereco = new ControllerCadEndereco(telaCadEndereco);
+        telaCadEndereco.setVisible(true);
+    }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -166,5 +182,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jMenuItem5;
     // End of variables declaration//GEN-END:variables
 }

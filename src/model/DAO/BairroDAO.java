@@ -43,7 +43,7 @@ public class BairroDAO implements InterfaceDAO<Bairro>{
             
             while(rst.next()){
                 Bairro bairro = new Bairro();
-                bairro.setIdBairro(rst.getInt("idbbairro"));
+                bairro.setIdBairro(rst.getInt("idbairro"));
                 bairro.setDescricaoBairro(rst.getString("descricaoBairro"));
                 bairros.add(bairro);
             }

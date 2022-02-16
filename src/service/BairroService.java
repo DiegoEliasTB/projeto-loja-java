@@ -15,22 +15,26 @@ public class BairroService implements InterfaceService<Bairro> {
 
     @Override
     public List<Bairro> buscar() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        BairroDAO bairroDAO = new BairroDAO();
+        return bairroDAO.retrieve();
     }
 
     @Override
     public Bairro buscar(int codigo) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        BairroDAO bairroDAO = new BairroDAO();
+        return bairroDAO.retrieve(codigo);
     }
 
     @Override
     public Bairro buscar(String descricao) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        BairroDAO bairroDAO = new BairroDAO();
+        return bairroDAO.retrieve(descricao);
     }
 
     @Override
     public void atualizar(Bairro objeto) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        BairroDAO cidadeDAO = new BairroDAO();
+        cidadeDAO.update(objeto);
     }
 
     @Override

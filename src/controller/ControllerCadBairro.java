@@ -1,5 +1,6 @@
 package controller;
 
+import static controller.ControllerCadCidade.codigo;
 import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -7,7 +8,11 @@ import javax.swing.JComboBox;
 import javax.swing.JFormattedTextField;
 import javax.swing.JTextField;
 import model.bo.Bairro;
+import model.bo.Cidade;
 import service.BairroService;
+import service.CidadeService;
+import view.TelaBusBairro;
+import view.TelaBusCidade;
 import view.TelaCadBairro;
 
 public class ControllerCadBairro implements ActionListener {
@@ -57,6 +62,28 @@ public class ControllerCadBairro implements ActionListener {
             //Setar o estado do formulário
             ativa(true);
             ligaDesliga(false);
+        } else if (acao.getSource() == telaCadBairro.getjButtonBuscar()) {
+            codigo = 0;
+            //chamada da tela da busca
+            TelaBusBairro telaBusBairro = new TelaBusBairro(null, true);
+            ControllerBusBairro controllerBusBairro = new ControllerBusBairro(telaBusBairro);
+            telaBusBairro.setVisible(true);
+
+            if (codigo != 0) {
+                Bairro bairro;
+                BairroService bairroService = new BairroService();
+                bairro = bairroService.buscar(codigo);
+
+                ativa(false);
+                ligaDesliga(true);
+
+                this.telaCadBairro.getjTFIdBairro().setText(bairro.getIdBairro() + "");
+                this.telaCadBairro.getjTFNomeBairro().setText(bairro.getDescricaoBairro());
+
+                this.telaCadBairro.getjTFIdBairro().setEnabled(false);
+            }
+        } else if (acao.getSource() == telaCadBairro.getjButtonSair()) {
+            
         }
     }
     

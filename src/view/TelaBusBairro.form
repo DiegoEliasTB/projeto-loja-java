@@ -67,7 +67,7 @@
               <Color blue="99" green="0" red="33" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Cidades"/>
+            <Property name="text" type="java.lang.String" value="Titulo"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -129,9 +129,6 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Carregar"/>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonCarregarActionPerformed"/>
-          </Events>
         </Component>
       </SubComponents>
     </Container>
@@ -175,25 +172,14 @@
             <Component class="javax.swing.JTable" name="jTable1">
               <Properties>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                  <Table columnCount="3" rowCount="0">
-                    <Column editable="false" title="Id" type="java.lang.Integer"/>
-                    <Column editable="false" title="Nome" type="java.lang.String"/>
-                    <Column editable="false" title="UF" type="java.lang.String"/>
+                  <Table columnCount="2" rowCount="0">
+                    <Column editable="true" title="ID" type="java.lang.Integer"/>
+                    <Column editable="true" title="Bairro" type="java.lang.String"/>
                   </Table>
                 </Property>
                 <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                   <TableColumnModel selectionModel="0">
-                    <Column maxWidth="50" minWidth="50" prefWidth="-1" resizable="true">
-                      <Title/>
-                      <Editor/>
-                      <Renderer/>
-                    </Column>
-                    <Column maxWidth="200" minWidth="420" prefWidth="-1" resizable="true">
-                      <Title/>
-                      <Editor/>
-                      <Renderer/>
-                    </Column>
-                    <Column maxWidth="50" minWidth="50" prefWidth="-1" resizable="true">
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                       <Title/>
                       <Editor/>
                       <Renderer/>

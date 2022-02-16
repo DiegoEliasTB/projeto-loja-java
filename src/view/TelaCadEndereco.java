@@ -116,8 +116,11 @@ public class TelaCadEndereco extends javax.swing.JFrame {
 
         jLabel3.setText("Logradouro");
 
+        jCBBairro.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "" }));
+
         jLabel4.setText("Bairro");
 
+        jCBCidade.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "" }));
         jCBCidade.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCBCidadeActionPerformed(evt);
@@ -185,7 +188,7 @@ public class TelaCadEndereco extends javax.swing.JFrame {
                         .addComponent(jLabel5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jCBCidade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(48, Short.MAX_VALUE))
+                .addContainerGap(50, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanelDados, java.awt.BorderLayout.CENTER);

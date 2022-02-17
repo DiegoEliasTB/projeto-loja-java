@@ -29,8 +29,8 @@ public class ControllerCadBairro implements ActionListener {
         telaCadBairro.getjButtonGravar().addActionListener(this);
         telaCadBairro.getjButtonSair().addActionListener(this);
 
-//        ativa(true);
-//        ligaDesliga(false);
+        ativa(true);
+        ligaDesliga(false);
 
     }
 

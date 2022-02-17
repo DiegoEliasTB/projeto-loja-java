@@ -15,22 +15,26 @@ public class EnderecoService implements InterfaceService<Endereco> {
 
     @Override
     public List<Endereco> buscar() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        EnderecoDAO enderecoDAO = new EnderecoDAO();
+        return enderecoDAO.retrieve();
     }
 
     @Override
     public Endereco buscar(int codigo) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        EnderecoDAO enderecoDAO = new EnderecoDAO();
+        return enderecoDAO.retrieve(codigo);
     }
 
     @Override
     public Endereco buscar(String descricao) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        EnderecoDAO enderecoDAO = new EnderecoDAO();
+        return enderecoDAO.retrieve(descricao);
     }
 
     @Override
     public void atualizar(Endereco objeto) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        EnderecoDAO enderecoDAO = new EnderecoDAO();
+        enderecoDAO.update(objeto);
     }
 
     @Override

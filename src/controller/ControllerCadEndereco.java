@@ -9,7 +9,10 @@ import javax.swing.JTextField;
 import model.bo.Bairro;
 import model.bo.Cidade;
 import model.bo.Endereco;
+import service.CidadeService;
 import service.EnderecoService;
+import view.TelaBusCidade;
+import view.TelaBusEndereco;
 import view.TelaCadEndereco;
 
 public class ControllerCadEndereco implements ActionListener {
@@ -35,7 +38,7 @@ public class ControllerCadEndereco implements ActionListener {
         if (acao.getSource() == telaCadEndereco.getjButtonNovo()) {
             ativa(false);
             ligaDesliga(true);
-            //this.telaCadEndereco.getjTFIdCidade().setEnabled(false);
+            this.telaCadEndereco.getjTFIdEndereco().setEnabled(false);
         } else if (acao.getSource() == telaCadEndereco.getjButtonCancelar()) {
             ativa(true);
             ligaDesliga(false);
@@ -51,13 +54,13 @@ public class ControllerCadEndereco implements ActionListener {
             
             
             //acionar o service da cidade passando o objeto como parametro
-            EnderecoService enderecoSevice = new EnderecoService();
+            EnderecoService enderecoService = new EnderecoService();
 
             if (this.telaCadEndereco.getjTFIdEndereco().getText().trim().equalsIgnoreCase("")) {
-                enderecoSevice.salvar(endereco);
+                enderecoService.salvar(endereco);
             } else {
                 endereco.setIdCep(Integer.parseInt(this.telaCadEndereco.getjTFIdEndereco().getText()));
-//                endereco.atualizar(endereco);
+                enderecoService.atualizar(endereco);
             }
             
             //Setar o estado do formulário
@@ -66,24 +69,28 @@ public class ControllerCadEndereco implements ActionListener {
         } else if (acao.getSource() == telaCadEndereco.getjButtonBuscar()) {
             codigo = 0;
             //chamada da tela da busca
-//            TelaBusCidade telaBusCidade = new TelaBusCidade(null, true);
-//            ControllerBusCidade controllerBusCidade = new ControllerBusCidade(telaBusCidade);
-//            telaBusCidade.setVisible(true);
+            TelaBusEndereco telaBusEndereco = new TelaBusEndereco(null, true);
+            ControllerBusEndereco controllerBusEndereco = new ControllerBusEndereco(telaBusEndereco);
+            telaBusEndereco.setVisible(true);
 
-//            if (codigo != 0) {
-//                Cidade cidade;
-//                CidadeService cidadeService = new CidadeService();
-//                cidade = cidadeService.buscar(codigo);
+            if (codigo != 0) {
+                Endereco endereco;
+                EnderecoService enderecoService = new EnderecoService();
+                endereco = enderecoService.buscar(codigo);
 //
+                CidadeService cs = new CidadeService();
+
                 ativa(false);
-                ligaDesliga(true);
+                ligaDesliga(true);                
 //
-//                this.telaCadEndereco.getjTFIdCidade().setText(cidade.getIdCidade() + "");
-//                this.telaCadEndereco.getjTFNomeCidade().setText(cidade.getDescricaoCidade());
-//                this.telaCadEndereco.getjTFUF().setText(cidade.getUfCidade());
-//
-//                this.telaCadEndereco.getjTFIdCidade().setEnabled(false);
-//            }
+                this.telaCadEndereco.getjTFIdEndereco().setText(endereco.getIdCep()+ "");
+                this.telaCadEndereco.getjTFCep().setText(endereco.getCepCep());
+                this.telaCadEndereco.getjTFLogradouro().setText(endereco.getLogradouroCep());
+//                this.telaCadEndereco.getjCBCidade().setSelectedItem(endereco.getCidade());
+//                this.telaCadEndereco.getjCBBairro().setSelectedItem(endereco.getBairro());
+
+                this.telaCadEndereco.getjTFIdEndereco().setEnabled(false);
+            }
         } else if (acao.getSource() == telaCadEndereco.getjButtonSair()) {
         }
     }

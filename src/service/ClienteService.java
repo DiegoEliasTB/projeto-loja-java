@@ -12,6 +12,11 @@ public class ClienteService implements InterfaceService<Cliente> {
         ClienteDAO clienteDAO = new ClienteDAO();
         clienteDAO.create(objeto);
     }
+    
+    public int buscaTotal() {
+        ClienteDAO clienteDAO = new ClienteDAO();
+        return clienteDAO.buscaTotal();
+    }
 
     @Override
     public List<Cliente> buscar() {

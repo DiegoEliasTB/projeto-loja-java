@@ -2,9 +2,12 @@ package model.DAO;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.time.ZoneId;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import model.bo.Cidade;
 import model.bo.Cliente;
 
 public class ClienteDAO implements InterfaceDAO<Cliente> {
@@ -42,6 +45,37 @@ public class ClienteDAO implements InterfaceDAO<Cliente> {
         }
         //fechar a conexão
         ConnectionFactory.closeConnection(conexao, pstm);
+    }
+    
+    public int buscaTotal() {
+         //Abrindo conexão
+        
+        String sqlExecutar = " SELECT COUNT(*) AS total from cliente ";
+
+        
+        Connection conexao     = ConnectionFactory.getConnection();
+        PreparedStatement pstm = null;
+        ResultSet rst          = null;
+        int total = 0;
+        
+        try{
+            pstm = conexao.prepareStatement(sqlExecutar);
+            rst = pstm.executeQuery();     
+            
+            while(rst.next()){
+                total = rst.getInt("total");
+            }
+            
+            
+            
+            
+            ConnectionFactory.closeConnection(conexao, pstm, rst);
+            return total;       
+        } catch(Exception ex){
+            ex.printStackTrace();
+            ConnectionFactory.closeConnection(conexao, pstm, rst);
+            return 0;
+        }
     }
 
     @Override

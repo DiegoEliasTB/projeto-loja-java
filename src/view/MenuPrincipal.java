@@ -9,6 +9,8 @@ import controller.ControllerCadBairro;
 import controller.ControllerCadCidade;
 import controller.ControllerCadCliente;
 import controller.ControllerCadEndereco;
+import javax.swing.JLabel;
+import service.ClienteService;
 
 /**
  *
@@ -33,6 +35,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         jMenu1 = new javax.swing.JMenu();
+        jLTotalCliente = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -46,6 +50,16 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jMenu1.setText("jMenu1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowActivated(java.awt.event.WindowEvent evt) {
+                formWindowActivated(evt);
+            }
+        });
+
+        jLTotalCliente.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLTotalCliente.setText("0");
+
+        jLabel1.setText("total de clientes registrados: ");
 
         jMenu2.setText("Cadastros");
 
@@ -99,11 +113,21 @@ public class MenuPrincipal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLTotalCliente)
+                    .addComponent(jLabel1))
+                .addContainerGap(209, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 278, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(52, 52, 52)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLTotalCliente)
+                .addContainerGap(185, Short.MAX_VALUE))
         );
 
         pack();
@@ -137,6 +161,21 @@ public class MenuPrincipal extends javax.swing.JFrame {
         telaCadEndereco.setVisible(true);
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
+    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
+        // TODO add your handling code here: lllllllllll
+        ClienteService clienteService = new ClienteService();
+        var total = clienteService.buscaTotal();
+        setTotalCliente(String.valueOf(total));
+    }//GEN-LAST:event_formWindowActivated
+
+    public JLabel getTotalCliente() {
+        return jLTotalCliente;
+    }
+    
+    public void setTotalCliente(String text) {
+        jLTotalCliente.setText(text);
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -173,6 +212,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLTotalCliente;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;

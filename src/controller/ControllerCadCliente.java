@@ -79,11 +79,11 @@ public class ControllerCadCliente implements ActionListener {
         } else if (acao.getSource() == telaCadCliente.getjButtonSair()) {
             this.telaCadCliente.dispose();
            
-        } else if (acao.getSource() == telaCadCliente.getjBBuscarCep()) {
+        } else if (acao.getSource() == telaCadCliente.getjButtonBuscar()) {
            
-            TelaBusEndereco telaBusEndereco = new TelaBusEndereco(null, true);
-            ControllerBusEndereco controllerBusendereco = new ControllerBusEndereco(telaBusEndereco);
-            telaBusEndereco.setVisible(true);
+//            TelaBusEndereco telaBusEndereco = new TelaBusEndereco(null, true);
+//            ControllerBusEndereco controllerBusendereco = new ControllerBusEndereco(telaBusEndereco);
+//            telaBusEndereco.setVisible(true);
             
 //            if (codigo != 0) {
 //                Endereco endereco;
@@ -97,9 +97,7 @@ public class ControllerCadCliente implements ActionListener {
 //                this.telaCadCliente.getjTFBairro().setText(endereco.getBairro().getDescricaoBairro());
 //                this.telaCadCliente.getjLabelLogradouro().setText(endereco.getLogradouroCep());
 //            }
-        } else if (acao.getSource() == telaCadCliente.getjButtonNovoCep()) {
-            //TelaCadEndereco telaCadEndereco = new TelaCadEndereco(null, true);
-        }
+        } 
     }
     
     //Método para habilitar/desabilitar botões(controle de estados)

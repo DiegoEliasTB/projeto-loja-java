@@ -20,7 +20,6 @@ public class ClienteDAO implements InterfaceDAO<Cliente> {
             pstm = conexao.prepareStatement(sqlExecutar);
             pstm.setString(1, objeto.getNome());
             
-            //var corrigeData = Date.from(objeto.getDtNasc().atStartOfDay(ZoneId.systemDefault()).toInstant());
             pstm.setString(2, objeto.getDtNasc().toString());
             
             pstm.setString(3, objeto.getCpfCliente());
@@ -28,11 +27,7 @@ public class ClienteDAO implements InterfaceDAO<Cliente> {
             pstm.setString(5, objeto.getFoneCliente());
             pstm.setString(6, objeto.getFone2Cliente());
             pstm.setString(7, objeto.getEmail());
-            pstm.setString(8, objeto.getCompleEndereco());
-            
-            System.out.println("aqio");
-            System.out.println("Encrenca: " + objeto.getEndereco().getIdCep());
-                
+            pstm.setString(8, objeto.getCompleEndereco());                
             
             pstm.setInt(9, objeto.getEndereco().getIdCep());
             
@@ -46,27 +41,27 @@ public class ClienteDAO implements InterfaceDAO<Cliente> {
 
     @Override
     public List<Cliente> retrieve() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
     public Cliente retrieve(int codigo) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
     public Cliente retrieve(String descricao) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
     public void update(Cliente objeto) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
     public void delete(Cliente objeto) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        throw new UnsupportedOperationException("Not supported yet.");
     }
     
 }

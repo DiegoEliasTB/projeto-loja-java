@@ -8,11 +8,8 @@ import javax.swing.JFormattedTextField;
 import javax.swing.JTextField;
 import view.TelaBusEndereco;
 import view.TelaCadCliente;
-import view.TelaCadEndereco;
-import controller.ControllerBusEndereco;
 import java.time.LocalDate;
 import model.bo.Cliente;
-import model.bo.Endereco;
 import service.ClienteService;
 import service.EnderecoService;
 
@@ -46,7 +43,6 @@ public class ControllerCadCliente implements ActionListener {
             ligaDesliga(false);
         } else if (acao.getSource() == telaCadCliente.getjButtonGravar()) {
             Cliente cliente = new Cliente();
-           // Endereco endereco = new Endereco();
             
             EnderecoService enderecoService = new EnderecoService();
             
@@ -59,10 +55,9 @@ public class ControllerCadCliente implements ActionListener {
             cliente.setEmail(this.telaCadCliente.getjFTFEmail().getText());
             
             var enderecoId = Integer.parseInt(this.telaCadCliente.getjFTFCep().getText());
-            System.out.println("AAa: "+ enderecoId);
+            
             cliente.setEndereco(enderecoService.buscar(enderecoId));
             
-            System.out.println("Teste: " + enderecoService.buscar(enderecoId) );
             //acionar o service da cidade passando o objeto como parametro
             ClienteService service = new ClienteService();
 

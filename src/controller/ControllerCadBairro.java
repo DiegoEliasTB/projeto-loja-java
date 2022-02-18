@@ -1,6 +1,5 @@
 package controller;
 
-import static controller.ControllerCadCidade.codigo;
 import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -8,11 +7,8 @@ import javax.swing.JComboBox;
 import javax.swing.JFormattedTextField;
 import javax.swing.JTextField;
 import model.bo.Bairro;
-import model.bo.Cidade;
 import service.BairroService;
-import service.CidadeService;
 import view.TelaBusBairro;
-import view.TelaBusCidade;
 import view.TelaCadBairro;
 
 public class ControllerCadBairro implements ActionListener {
@@ -45,12 +41,12 @@ public class ControllerCadBairro implements ActionListener {
             ligaDesliga(false);
         } else if (acao.getSource() == telaCadBairro.getjButtonGravar()) {
             
-            //montar um objeto do tipo cidade
+            //montar um objeto do tipo bairro
             Bairro bairro = new Bairro();
             bairro.setDescricaoBairro(this.telaCadBairro.getjTFNomeBairro().getText());
             
             
-            //acionar o service da cidade passando o objeto como parametro
+            //acionar o service do bairro passando o objeto como parametro
             BairroService bairroSevice = new BairroService();
 
             if (this.telaCadBairro.getjTFIdBairro().getText().trim().equalsIgnoreCase("")) {

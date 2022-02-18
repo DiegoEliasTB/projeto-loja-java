@@ -1,16 +1,11 @@
 package view;
 
 public class TelaBusBairro extends javax.swing.JDialog {
-
-    /**
-     * Creates new form FormModeloBuscas
-     */
     public TelaBusBairro(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
     }
 
-   
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -119,7 +114,6 @@ public class TelaBusBairro extends javax.swing.JDialog {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    
     public static void main(String args[]) {
      
 

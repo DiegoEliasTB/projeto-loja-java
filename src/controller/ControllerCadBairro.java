@@ -45,12 +45,12 @@ public class ControllerCadBairro implements ActionListener {
             ligaDesliga(false);
         } else if (acao.getSource() == telaCadBairro.getjButtonGravar()) {
             
-            //montar um objeto do tipo cidade
+            //montar um objeto do tipo bairro
             Bairro bairro = new Bairro();
             bairro.setDescricaoBairro(this.telaCadBairro.getjTFNomeBairro().getText());
             
             
-            //acionar o service da cidade passando o objeto como parametro
+            //acionar o service do bairro passando o objeto como parametro
             BairroService bairroSevice = new BairroService();
 
             if (this.telaCadBairro.getjTFIdBairro().getText().trim().equalsIgnoreCase("")) {

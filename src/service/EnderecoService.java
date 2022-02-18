@@ -39,7 +39,7 @@ public class EnderecoService implements InterfaceService<Endereco> {
 
     @Override
     public void apagar(Endereco objeto) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
 

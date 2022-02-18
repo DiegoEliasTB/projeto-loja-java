@@ -1,6 +1,5 @@
 package controller;
 
-import static controller.ControllerCadCidade.codigo;
 import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -8,11 +7,8 @@ import javax.swing.JComboBox;
 import javax.swing.JFormattedTextField;
 import javax.swing.JTextField;
 import model.bo.Bairro;
-import model.bo.Cidade;
 import service.BairroService;
-import service.CidadeService;
 import view.TelaBusBairro;
-import view.TelaBusCidade;
 import view.TelaCadBairro;
 
 public class ControllerCadBairro implements ActionListener {

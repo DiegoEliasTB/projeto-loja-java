@@ -3,6 +3,7 @@ package view;
 import java.awt.event.KeyEvent;
 import javax.swing.JButton;
 import javax.swing.JFormattedTextField;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
@@ -14,6 +15,39 @@ public class TelaCadCliente extends javax.swing.JFrame {
     public TelaCadCliente() {
         initComponents();
     }
+    
+    public JTextField getjTFNome() {
+        return jTFNome;
+    }
+    
+    public JTextField getjFTFDtNasc() {
+        return jFTFDtNasc;
+    }
+    
+    public JTextField getjFTFRG() {
+        return jFTFRG;
+    }
+    
+    public JTextField getjFTFCPF() {
+        return jFTFCPF;
+    }
+    
+    public JTextField getjFTFFone1() {
+        return jFTFFone1;
+    }
+    
+    public JTextField getjFTFFone2() {
+        return jFTFFone2;
+    }
+    
+    public JTextField getjFTFEmail() {
+        return jFTFEmail;
+    }
+    
+    public JTextField getjFTFCep() {
+        return jFTFCep;
+    }
+        
 
     public JButton getjBBuscarCep() {
         return jBBuscarCep;
@@ -43,10 +77,6 @@ public class TelaCadCliente extends javax.swing.JFrame {
         return jButtonSair;
     }
 
-    public JFormattedTextField getjFTFCep() {
-        return jFTFCep;
-    }
-
     public JTextField getjTFBairro() {
         return jTFBairro;
     }
@@ -65,6 +95,10 @@ public class TelaCadCliente extends javax.swing.JFrame {
 
     public JPanel getjPanelDados() {
         return jPanelDados;
+    }
+    
+    public JLabel getjLabelLogradouro() {
+        return jLabel12;
     }
     
     
@@ -98,7 +132,6 @@ public class TelaCadCliente extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jFTFEmail = new javax.swing.JFormattedTextField();
         jLabel9 = new javax.swing.JLabel();
-        jFTFCep = new javax.swing.JFormattedTextField();
         jBBuscarCep = new javax.swing.JButton();
         jButtonNovoCep = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
@@ -109,6 +142,7 @@ public class TelaCadCliente extends javax.swing.JFrame {
         jTFLogradouro = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
         jTFComplemento = new javax.swing.JTextField();
+        jFTFCep = new javax.swing.JTextField();
         jPanelBotoes = new javax.swing.JPanel();
         jButtonNovo = new javax.swing.JButton();
         jButtonCancelar = new javax.swing.JButton();
@@ -133,7 +167,7 @@ public class TelaCadCliente extends javax.swing.JFrame {
         jPanelTitulo.setLayout(jPanelTituloLayout);
         jPanelTituloLayout.setHorizontalGroup(
             jPanelTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabelTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, 718, Short.MAX_VALUE)
+            .addComponent(jLabelTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
         );
         jPanelTituloLayout.setVerticalGroup(
             jPanelTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -147,6 +181,11 @@ public class TelaCadCliente extends javax.swing.JFrame {
         jLabel1.setText("Id");
 
         jTFId.setEnabled(false);
+        jTFId.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTFIdActionPerformed(evt);
+            }
+        });
 
         jLabel2.setText("Nome");
 
@@ -182,13 +221,12 @@ public class TelaCadCliente extends javax.swing.JFrame {
 
         jLabel9.setText("CEP");
 
-        try {
-            jFTFCep.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##.###-###")));
-        } catch (java.text.ParseException ex) {
-            ex.printStackTrace();
-        }
-
         jBBuscarCep.setText("...");
+        jBBuscarCep.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jBBuscarCepMouseClicked(evt);
+            }
+        });
 
         jButtonNovoCep.setText("+");
 
@@ -215,8 +253,8 @@ public class TelaCadCliente extends javax.swing.JFrame {
                 .addGroup(jPanelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addGroup(jPanelDadosLayout.createSequentialGroup()
-                            .addComponent(jFTFCep)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jFTFCep, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jBBuscarCep)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(jButtonNovoCep))
@@ -319,11 +357,11 @@ public class TelaCadCliente extends javax.swing.JFrame {
                     .addComponent(jLabel11))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jFTFCep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jBBuscarCep, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonNovoCep, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTFCidade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTFBairro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTFBairro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jFTFCep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -373,6 +411,14 @@ public class TelaCadCliente extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jTFIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTFIdActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTFIdActionPerformed
+
+    private void jBBuscarCepMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBBuscarCepMouseClicked
+        
+    }//GEN-LAST:event_jBBuscarCepMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -417,7 +463,7 @@ public class TelaCadCliente extends javax.swing.JFrame {
     private javax.swing.JButton jButtonNovoCep;
     private javax.swing.JButton jButtonSair;
     private javax.swing.JFormattedTextField jFTFCPF;
-    private javax.swing.JFormattedTextField jFTFCep;
+    private javax.swing.JTextField jFTFCep;
     private javax.swing.JFormattedTextField jFTFDtNasc;
     private javax.swing.JFormattedTextField jFTFEmail;
     private javax.swing.JFormattedTextField jFTFFone1;

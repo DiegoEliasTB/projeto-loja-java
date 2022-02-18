@@ -83,6 +83,7 @@ public class ControllerCadCidade implements ActionListener {
                 this.telaCadCidade.getjTFIdCidade().setEnabled(false);
             }
         } else if (acao.getSource() == telaCadCidade.getjButtonSair()) {
+            this.telaCadCidade.dispose();
         }
     }
 

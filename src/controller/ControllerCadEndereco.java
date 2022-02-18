@@ -77,12 +77,11 @@ public class ControllerCadEndereco implements ActionListener {
                 Endereco endereco;
                 EnderecoService enderecoService = new EnderecoService();
                 endereco = enderecoService.buscar(codigo);
-//
+                
                 CidadeService cs = new CidadeService();
 
                 ativa(false);
                 ligaDesliga(true);                
-//
                 this.telaCadEndereco.getjTFIdEndereco().setText(endereco.getIdCep()+ "");
                 this.telaCadEndereco.getjTFCep().setText(endereco.getCepCep());
                 this.telaCadEndereco.getjTFLogradouro().setText(endereco.getLogradouroCep());
@@ -92,6 +91,7 @@ public class ControllerCadEndereco implements ActionListener {
                 this.telaCadEndereco.getjTFIdEndereco().setEnabled(false);
             }
         } else if (acao.getSource() == telaCadEndereco.getjButtonSair()) {
+            this.telaCadEndereco.dispose();
         }
     }
     

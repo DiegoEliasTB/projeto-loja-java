@@ -8,15 +8,11 @@
             <file>file:/C:/Users/house/Documents/Aulas%202021%20-%202/PDS%201/ProjettoLojaJavaDAO/src/view/TelaCadCidade.java</file>
         </group>
         <group>
-            <file>file:/E:/Biblioteca/Documentos/Projetos/IFSC/Praticas%20de%20programacao%201/ProjettoLojaJavaDAO/src/service/EnderecoService.java</file>
-            <file>file:/E:/Biblioteca/Documentos/Projetos/IFSC/Praticas%20de%20programacao%201/ProjettoLojaJavaDAO/src/model/DAO/CidadeDAO.java</file>
-            <file>file:/E:/Biblioteca/Documentos/Projetos/IFSC/Praticas%20de%20programacao%201/ProjettoLojaJavaDAO/src/model/DAO/BairroDAO.java</file>
-            <file>file:/E:/Biblioteca/Documentos/Projetos/IFSC/Praticas%20de%20programacao%201/ProjettoLojaJavaDAO/src/controller/ControllerCadEndereco.java</file>
-            <file>file:/E:/Biblioteca/Documentos/Projetos/IFSC/Praticas%20de%20programacao%201/ProjettoLojaJavaDAO/src/service/CidadeService.java</file>
-            <file>file:/E:/Biblioteca/Documentos/Projetos/IFSC/Praticas%20de%20programacao%201/ProjettoLojaJavaDAO/src/controller/ControllerCadCidade.java</file>
-            <file>file:/E:/Biblioteca/Documentos/Projetos/IFSC/Praticas%20de%20programacao%201/ProjettoLojaJavaDAO/src/model/DAO/EnderecoDAO.java</file>
-            <file>file:/E:/Biblioteca/Documentos/Projetos/IFSC/Praticas%20de%20programacao%201/ProjettoLojaJavaDAO/src/view/TelaCadEndereco.java</file>
-            <file>file:/E:/Biblioteca/Documentos/Projetos/IFSC/Praticas%20de%20programacao%201/ProjettoLojaJavaDAO/src/view/TelaCadCidade.java</file>
+            <file>file:/C:/Users/Diego/Documents/Projetos/IFSC/praticas/projeto-loja-java/src/model/DAO/EnderecoDAO.java</file>
+            <file>file:/C:/Users/Diego/Documents/Projetos/IFSC/praticas/projeto-loja-java/src/controller/ControllerCadEndereco.java</file>
+            <file>file:/C:/Users/Diego/Documents/Projetos/IFSC/praticas/projeto-loja-java/src/controller/ControllerBusEndereco.java</file>
+            <file>file:/C:/Users/Diego/Documents/Projetos/IFSC/praticas/projeto-loja-java/src/controller/ControllerCadCidade.java</file>
+            <file>file:/C:/Users/Diego/Documents/Projetos/IFSC/praticas/projeto-loja-java/src/model/DAO/CidadeDAO.java</file>
         </group>
     </open-files>
 </project-private>

@@ -1,5 +1,7 @@
 package view;
 
+import javax.swing.JButton;
+
 public class TelaBusEndereco extends javax.swing.JDialog {
 
  
@@ -141,6 +143,10 @@ public class TelaBusEndereco extends javax.swing.JDialog {
 
     public javax.swing.JButton getjButtonSair() {
         return jButtonSair;
+    }
+
+    public void setjButtonSair(JButton jButtonSair) {
+        this.jButtonSair = jButtonSair;
     }
 
     public javax.swing.JTable getjTable1() {

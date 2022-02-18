@@ -83,7 +83,7 @@ public class ControllerCadBairro implements ActionListener {
                 this.telaCadBairro.getjTFIdBairro().setEnabled(false);
             }
         } else if (acao.getSource() == telaCadBairro.getjButtonSair()) {
-            
+            this.telaCadBairro.dispose();
         }
     }
     

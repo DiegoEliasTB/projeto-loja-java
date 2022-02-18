@@ -1,10 +1,11 @@
 package model.bo;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Cliente extends Pessoa{
     private int idCliente;
-    private Date dtNasc;
+    private LocalDate dtNasc;
     private String cpfCliente;
     private String rgCliente;
     private String foneCliente;
@@ -13,7 +14,7 @@ public class Cliente extends Pessoa{
     public Cliente() {
     }
 
-    public Cliente(int idClinete,Date dtNasc, String cpfCliente, String rgCliente, String foneCliente, String fone2Cliente, String nome, String email, String compleEndereco, Endereco endereco) {
+    public Cliente(int idClinete,LocalDate dtNasc, String cpfCliente, String rgCliente, String foneCliente, String fone2Cliente, String nome, String email, String compleEndereco, Endereco endereco) {
         super(nome, email, compleEndereco, endereco);
         this.idCliente = idClinete;
         this.dtNasc = dtNasc;
@@ -31,11 +32,11 @@ public class Cliente extends Pessoa{
         this.idCliente = idCliente;
     }  
     
-    public Date getDtNasc() {
+    public LocalDate getDtNasc() {
         return dtNasc;
     }
 
-    public void setDtNasc(Date dtNasc) {
+    public void setDtNasc(LocalDate dtNasc) {
         this.dtNasc = dtNasc;
     }
 

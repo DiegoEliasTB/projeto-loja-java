@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package view;
 
 import java.util.List;
@@ -16,16 +11,9 @@ import model.bo.Bairro;
 import model.bo.Cidade;
 import model.bo.Endereco;
 
-/**
- *
- * @author house
- */
 public class TelaCadEndereco extends javax.swing.JFrame {
 
-    /**
-     * Creates new form FormModeloCadastros
-     */
-    public TelaCadEndereco() {
+       public TelaCadEndereco() {
         initComponents();
         carregaComboCidade();
         carregaComboBairro();

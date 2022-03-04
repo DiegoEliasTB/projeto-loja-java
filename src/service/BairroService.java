@@ -33,13 +33,13 @@ public class BairroService implements InterfaceService<Bairro> {
 
     @Override
     public void atualizar(Bairro objeto) {
-        BairroDAO cidadeDAO = new BairroDAO();
-        cidadeDAO.update(objeto);
+        BairroDAO bairroDAO = new BairroDAO();
+        bairroDAO.update(objeto);
     }
 
     @Override
     public void apagar(Bairro objeto) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        throw new UnsupportedOperationException("Not supported yet.");
     }
    
 }

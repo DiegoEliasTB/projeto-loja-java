@@ -82,8 +82,7 @@ public class BairroDAO implements InterfaceDAO<Bairro>{
             ex.printStackTrace();
             ConnectionFactory.closeConnection(conexao, pstm, rst);
             return null;
-        }
-          
+        }   
     }
 
     @Override

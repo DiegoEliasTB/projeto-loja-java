@@ -8,10 +8,16 @@
             <file>file:/C:/Users/house/Documents/Aulas%202021%20-%202/PDS%201/ProjettoLojaJavaDAO/src/view/TelaCadCidade.java</file>
         </group>
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/Diego/Documents/Projetos/IFSC/praticas/projeto-loja-java/src/controller/ControllerCadCliente.java</file>
             <file>file:/C:/Users/Diego/Documents/Projetos/IFSC/praticas/projeto-loja-java/src/model/DAO/ClienteDAO.java</file>
             <file>file:/C:/Users/Diego/Documents/Projetos/IFSC/praticas/projeto-loja-java/src/view/ModeloBuscas.java</file>
             <file>file:/C:/Users/Diego/Documents/Projetos/IFSC/praticas/projeto-loja-java/src/view/TelaCadEndereco.java</file>
+=======
+            <file>file:/E:/Biblioteca/Documentos/Projetos/IFSC/Praticas%20de%20programacao%201/ProjettoLojaJavaDAO/src/model/DAO/BairroDAO.java</file>
+            <file>file:/E:/Biblioteca/Documentos/Projetos/IFSC/Praticas%20de%20programacao%201/ProjettoLojaJavaDAO/src/controller/ControllerCadBairro.java</file>
+            <file>file:/E:/Biblioteca/Documentos/Projetos/IFSC/Praticas%20de%20programacao%201/ProjettoLojaJavaDAO/src/controller/ControllerCadCidade.java</file>
+>>>>>>> 66b52c54c52b32cac2ea02bc7e9cdc4d4ce572da
         </group>
     </open-files>
 </project-private>

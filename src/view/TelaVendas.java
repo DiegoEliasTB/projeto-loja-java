@@ -26,6 +26,10 @@ public class TelaVendas extends javax.swing.JDialog {
         initComponents();
     }
 
+    TelaVendas() {
+        initComponents();
+    }
+
     public JTextField getJTFStatus() {
         return JTFStatus;
     }

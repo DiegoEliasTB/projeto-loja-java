@@ -9,6 +9,7 @@ import controller.ControllerCadBairro;
 import controller.ControllerCadCidade;
 import controller.ControllerCadCliente;
 import controller.ControllerCadEndereco;
+import controller.ControllerVendas;
 import javax.swing.JLabel;
 import service.ClienteService;
 
@@ -45,6 +46,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
+        jMenuItem6 = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
 
         jMenu1.setText("jMenu1");
@@ -101,7 +103,16 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu2);
 
-        jMenu3.setText("Movimentos");
+        jMenu3.setText("Ações");
+
+        jMenuItem6.setText("Venda - PDV");
+        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem6ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem6);
+
         jMenuBar1.add(jMenu3);
 
         jMenu4.setText("Relatórios");
@@ -168,6 +179,12 @@ public class MenuPrincipal extends javax.swing.JFrame {
         setTotalCliente(String.valueOf(total));
     }//GEN-LAST:event_formWindowActivated
 
+    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+        TelaVendas telaVendas = new TelaVendas();
+        ControllerVendas controllerVendas = new ControllerVendas(telaVendas);
+        telaVendas.setVisible(true);
+    }//GEN-LAST:event_jMenuItem6ActionPerformed
+
     public JLabel getTotalCliente() {
         return jLTotalCliente;
     }
@@ -224,5 +241,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JMenuItem jMenuItem6;
     // End of variables declaration//GEN-END:variables
 }

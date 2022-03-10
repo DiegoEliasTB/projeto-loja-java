@@ -4,6 +4,7 @@
  */
 package service;
 
+import model.DAO.ProdutoDAO;
 import model.bo.Produto;
 
 /**
@@ -13,6 +14,7 @@ import model.bo.Produto;
 public class ProdutoService {
     
     public Produto buscarPorId(Long idProduto) {
-        return null;
+        ProdutoDAO dao = new ProdutoDAO();
+        return dao.buscarPorId(idProduto);
     }
 }

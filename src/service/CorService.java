@@ -4,16 +4,16 @@
  */
 package service;
 
-import model.DAO.MarcaDAO;
-import model.bo.Marca;
+import model.DAO.CorDAO;
+import model.bo.Cor;
 
 /**
  *
  * @author Diego
  */
-public class MarcaService {
-    public Marca buscarPorId(Long idMarca) {
-        MarcaDAO marcaDAO = new MarcaDAO();
-        return marcaDAO.buscarPorId(idMarca);
+public class CorService {
+    public Cor buscarPorId(Long idCor) {
+        CorDAO dao = new CorDAO();
+        return dao.buscarPorId(idCor);
     }
 }

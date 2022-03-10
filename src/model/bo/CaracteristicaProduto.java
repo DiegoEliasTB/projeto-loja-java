@@ -1,7 +1,5 @@
 package model.bo;
 
-import java.math.BigDecimal;
-
 public class CaracteristicaProduto {
 
     private Long idCaracteristicaProduto;
@@ -9,13 +7,13 @@ public class CaracteristicaProduto {
     private Cor cor;
     private String tamanho;
     private String barra;
-    private BigDecimal quantidadeEstoque;
+    private Long quantidadeEstoque;
 
     public CaracteristicaProduto () {
 
     }
 
-    public CaracteristicaProduto(Long idCaracteristicaProduto, Produto produto, Cor cor, String tamanho, String barra, BigDecimal quantidadeEstoque) {
+    public CaracteristicaProduto(Long idCaracteristicaProduto, Produto produto, Cor cor, String tamanho, String barra, Long quantidadeEstoque) {
         this.idCaracteristicaProduto = idCaracteristicaProduto;
         this.produto = produto;
         this.cor = cor;
@@ -64,11 +62,11 @@ public class CaracteristicaProduto {
         this.barra = barra;
     }
 
-    public BigDecimal getQuantidadeEstoque() {
+    public Long getQuantidadeEstoque() {
         return quantidadeEstoque;
     }
 
-    public void setQuantidadeEstoque(BigDecimal quantidadeEstoque) {
+    public void setQuantidadeEstoque(Long quantidadeEstoque) {
         this.quantidadeEstoque = quantidadeEstoque;
     }
 

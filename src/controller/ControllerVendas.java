@@ -3,6 +3,7 @@ package controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
+import service.CaracteristicaProdutoService;
 import service.ProdutoService;
 import view.TelaVendas;
 
@@ -20,8 +21,9 @@ public class ControllerVendas implements ActionListener {
                 if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
                     //
                 } else if (evt.getKeyCode() == KeyEvent.VK_F1) {
-                    ProdutoService produtoService = new ProdutoService();
-                    var sim = produtoService.buscarPorId(1L);
+
+                    CaracteristicaProdutoService service = new CaracteristicaProdutoService();
+                    var sim = service.buscarPorId(3L);
                     
                     System.out.println("sim: " + sim); //teste de serviço
                 } else if (evt.getKeyCode() == KeyEvent.VK_F2) {

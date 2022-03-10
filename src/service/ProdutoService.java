@@ -17,4 +17,9 @@ public class ProdutoService {
         ProdutoDAO dao = new ProdutoDAO();
         return dao.buscarPorId(idProduto);
     }
+    
+    public Produto buscarPorCodigoBarras(String codBarras) {
+        ProdutoDAO dao = new ProdutoDAO();
+        return dao.buscarPorCodigoBarras(codBarras);
+    }
 }

@@ -22,8 +22,8 @@ public class ControllerVendas implements ActionListener {
                     //
                 } else if (evt.getKeyCode() == KeyEvent.VK_F1) {
 
-                    CaracteristicaProdutoService service = new CaracteristicaProdutoService();
-                    var sim = service.buscarPorId(3L);
+                    ProdutoService service = new ProdutoService();
+                    var sim = service.buscarPorCodigoBarras("5901234123457");
                     
                     System.out.println("sim: " + sim); //teste de serviço
                 } else if (evt.getKeyCode() == KeyEvent.VK_F2) {

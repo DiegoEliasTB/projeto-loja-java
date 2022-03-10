@@ -4,6 +4,7 @@
  */
 package service;
 
+import model.DAO.MarcaDAO;
 import model.bo.Marca;
 
 /**
@@ -12,6 +13,7 @@ import model.bo.Marca;
  */
 public class MarcaService {
     public Marca buscarPorId(Long idProduto) {
-        return null;
+        MarcaDAO marcaDAO = new MarcaDAO();
+        return marcaDAO.buscarPorId(idProduto);
     }
 }

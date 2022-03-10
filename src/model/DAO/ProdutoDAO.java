@@ -8,6 +8,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import model.bo.Produto;
+import service.MarcaService;
+import service.TipoProdutoService;
 
 /**
  *
@@ -35,12 +37,21 @@ public class ProdutoDAO {
             pstm.setInt(1, idProduto.intValue());
             rst = pstm.executeQuery();  
             Produto produto = new Produto();
+            
+            MarcaService marcaService  = new MarcaService();
+            TipoProdutoService tipoProdutoService = new TipoProdutoService();
+            
             while(rst.next()){
                 produto.setIdProduto(rst.getLong("idproduto"));
                 produto.setDescricao(rst.getString("descricaoProduto"));
                 produto.setValor(rst.getBigDecimal("valProduto"));
-                //produto.setMarca(rst.getO("marca_idmarca")); fazer marca
-                //produto.setTipoProduto(rst.getString("tipoProduto_idtipoProduto"));
+                
+                final var marcaId = rst.getLong("marca_idmarca");
+                produto.setMarca(marcaService.buscarPorId(marcaId));
+                
+                final var tipoProdutoId = rst.getLong("tipoProduto_idtipoProduto");
+                produto.setTipoProduto(tipoProdutoService.buscarPorId(tipoProdutoId));
+                
                 //produto.setDescricao(rst.getString("tamanho_idtamanho"));
             }
             ConnectionFactory.closeConnection(conexao, pstm, rst);

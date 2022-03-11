@@ -12,7 +12,7 @@ public class VendasDAO implements InterfaceDAO<Venda>{
     public void create(Venda objeto) {
         //Abrindo conexão
         Connection conexao = ConnectionFactory.getConnection();
-        String sqlExecutar = "INSERT INTO venda (serieVenda, dtVenda, hrVenda, valDescontoVenda, valTotalVenda, cliente_idcliente, condicaoPagamento_idcindicaoPagamento, diaVencimentoParcela, vendedor_idvendedor) VALUES(?,?,?,?,?,?,?,?,?)";
+        String sqlExecutar = "INSERT INTO venda (serieVenda, dtVenda, hrVenda, valDescontoVenda, valTotalVenda, cliente_idcliente, condicaoPagamento_idcondicaoPagamento, diaVencimentoParcela, vendedor_idvendedor) VALUES(?,?,?,?,?,?,?,?,?)";
         PreparedStatement pstm = null;
         
         try{
@@ -22,10 +22,10 @@ public class VendasDAO implements InterfaceDAO<Venda>{
             pstm.setString(3, objeto.getHora());
             pstm.setBigDecimal(4, objeto.getDesconto());
             pstm.setBigDecimal(5, objeto.getTotal());
-            pstm.setObject(6, objeto.getCliente());
-            pstm.setObject(7, objeto.getCondicaoPagamento());
+            pstm.setInt(6, objeto.getCliente().getIdCliente());
+            pstm.setLong(7, objeto.getCondicaoPagamento().getIdCondicaoPagamento());
             pstm.setLong(8, objeto.getDiaVencimentoParcela());
-            pstm.setObject(9, objeto.getVendedor());
+            pstm.setLong(9, objeto.getVendedor().getIdVendedor());
             
             pstm.executeUpdate();
         } catch(Exception ex){

@@ -108,6 +108,8 @@ public class ControllerVendas implements ActionListener {
                     var vendedor = vendedorService.buscarPorId(1L);
                     venda.setVendedor(vendedor);
                     
+                    venda.setDiaVencimentoParcela(vendedor.getIdVendedor());
+                    
                     vendasService.salvar(venda);
                 } else if (evt.getKeyCode() == KeyEvent.VK_F3) {
 

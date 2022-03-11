@@ -17,8 +17,8 @@ import model.bo.Cor;
 public class CondicaoPagamentoDAO {
     public CondicaoPagamento buscarPorId(Long idCondicaoPagamento) {
         String sqlExecutar     =   " SELECT idcondicaoPagamento, "
-                                 + " descricaoCondicaoPagamento "
-                                 + " numDiasAtePrimeiraParcela "
+                                 + " descricaoCondicaoPagamento, "
+                                 + " numDiasAtePrimeiraParcela, "
                                  + " numDiasEntreParcelas "
                                  + " FROM condicaopagamento "
                                  + " WHERE condicaopagamento.idcondicaoPagamento = ?";

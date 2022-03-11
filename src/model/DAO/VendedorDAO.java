@@ -18,17 +18,17 @@ import service.EnderecoService;
 public class VendedorDAO {
     public Vendedor buscarPorId(Long idVendedor) {
         String sqlExecutar     =   " SELECT idvendedor, "
-                                 + " nomeVendedor "
-                                 + " cpfVendedor "
-                                 + " emailVendedor "
-                                 + " foneVendedor "
-                                 + " fone2Vendedor "
-                                 + " percentComissaoCenda "
-                                 + " percentComissaoRecebto "
-                                 + " compleEnderecoVendedor "
+                                 + " nomeVendedor, "
+                                 + " cpfVendedor, "
+                                 + " emailVendedor, "
+                                 + " foneVendedor, "
+                                 + " fone2Vendedor, "
+                                 + " percentComissaoVenda, "
+                                 + " percentComissaoRecebto, "
+                                 + " compleEnderecoVendedor, "
                                  + " endereco_idcep "
-                                 + " FROM cor "
-                                 + " WHERE cor.idcor = ?";
+                                 + " FROM vendedor "
+                                 + " WHERE vendedor.idvendedor = ?";
         
         Connection conexao     = ConnectionFactory.getConnection();
         PreparedStatement pstm = null;
@@ -46,12 +46,15 @@ public class VendedorDAO {
                 vendedor.setEmail(rst.getString("emailVendedor"));
                 vendedor.setTelefone1(rst.getString("foneVendedor"));
                 vendedor.setTelefone2(rst.getString("fone2Vendedor"));
-                vendedor.setPercentualComissao(rst.getBigDecimal("percentComissaoCenda"));
+                vendedor.setPercentualComissao(rst.getBigDecimal("percentComissaoVenda"));
                 vendedor.setPercentualRecebido(rst.getBigDecimal("percentComissaoRecebto"));
                 vendedor.setCompleEndereco(rst.getString("compleEnderecoVendedor"));
                 
                 EnderecoService enderecoService = new EnderecoService();
+                System.out.println("cep: " + vendedor.getEndereco());
+                System.out.println("será?: " + rst.getInt("endereco_idcep"));
                 var cep = enderecoService.buscar(rst.getInt("endereco_idcep"));
+                System.out.println("cep: " + cep);
                 vendedor.setEndereco(cep);
             }
             ConnectionFactory.closeConnection(conexao, pstm, rst);

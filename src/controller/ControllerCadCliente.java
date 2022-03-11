@@ -3,12 +3,13 @@ package controller;
 import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.util.Date;
 import javax.swing.JComboBox;
 import javax.swing.JFormattedTextField;
 import javax.swing.JTextField;
-import view.TelaBusEndereco;
 import view.TelaCadCliente;
-import java.time.LocalDate;
 import model.bo.Cliente;
 import service.ClienteService;
 import service.EnderecoService;
@@ -47,7 +48,7 @@ public class ControllerCadCliente implements ActionListener {
             EnderecoService enderecoService = new EnderecoService();
             
             cliente.setNome(this.telaCadCliente.getjTFNome().getText());
-            cliente.setDtNasc((this.telaCadCliente.getjFTFDtNasc().getText()));
+            cliente.setDtNasc(LocalDate.parse(this.telaCadCliente.getjFTFDtNasc().getText()));
             cliente.setRgCliente(this.telaCadCliente.getjFTFRG().getText());
             cliente.setCpfCliente(this.telaCadCliente.getjFTFCPF().getText());
             cliente.setFoneCliente(this.telaCadCliente.getjFTFFone1().getText());

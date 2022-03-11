@@ -36,8 +36,8 @@ public class Cliente extends Pessoa{
         return dtNasc;
     }
 
-    public void setDtNasc(Date dtNasc) {
-        this.dtNasc = LocalDate.parse(dtNasc.toString());
+    public void setDtNasc(LocalDate dtNasc) {
+        this.dtNasc = dtNasc;
     }
 
     public String getCpfCliente() {

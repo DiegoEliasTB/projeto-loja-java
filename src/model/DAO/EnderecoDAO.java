@@ -104,6 +104,11 @@ public class EnderecoDAO implements InterfaceDAO<Endereco> {
                 endereco.setIdCep(rst.getInt("idcep"));
                 endereco.setCepCep(rst.getString("cepCep"));
                 endereco.setLogradouroCep(rst.getString("logradouroCep")); 
+                System.out.println("retorno banco cidade: " + rst.getInt("cidade_idcidade") );
+                var cidade = cidadeService.buscar(rst.getInt("cidade_idcidade"));
+                
+                System.out.println("service com cidade: " + cidade );
+                
                 endereco.setCidade(cidadeService.buscar(rst.getInt("cidade_idcidade")));
                 endereco.setBairro(bairroService.buscar(rst.getInt("bairro_idbairro")));
             }

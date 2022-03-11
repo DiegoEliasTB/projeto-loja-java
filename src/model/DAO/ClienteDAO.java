@@ -86,13 +86,13 @@ public class ClienteDAO implements InterfaceDAO<Cliente> {
     public Cliente retrieve(int codigo) {
         String sqlExecutar     =   " SELECT idcliente, "
                                  + " nomeCliente, "
-                                 + " dtNasCliente "
-                                 + " cpfCliente "
-                                 + " rgCliente "
-                                 + " foneCliente "
-                                 + " fone2Cliente "
-                                 + " emailCliente "
-                                 + " compleEnderecoCliente "
+                                 + " dtNasCliente, "
+                                 + " cpfCliente, "
+                                 + " rgCliente, "
+                                 + " foneCliente, "
+                                 + " fone2Cliente, "
+                                 + " emailCliente, "
+                                 + " compleEnderecoCliente, "
                                  + " endereco_idcep "
                                  + " FROM cliente "
                                  + " WHERE cliente.idcliente = ?";
@@ -108,7 +108,20 @@ public class ClienteDAO implements InterfaceDAO<Cliente> {
             while(rst.next()){
                 cliente.setIdCliente(rst.getInt("idcliente"));
                 cliente.setNome(rst.getString("nomeCliente"));
-                cliente.setDtNasc(rst.getDate("dtNasCliente"));
+                
+                System.out.println("Data foda: " + rst.getString("dtNasCliente"));
+               
+                
+                var dataAno = Integer.valueOf(rst.getString("dtNasCliente").substring(0, 4));
+                var dataMes = Integer.valueOf(rst.getString("dtNasCliente").substring(5, 7));
+                var dataDia = Integer.valueOf(rst.getString("dtNasCliente").substring(8, 10));
+                 System.out.println("Data dia: " + dataAno);
+                System.out.println("Data mes: " + dataMes);
+                System.out.println("Data ano: " + dataDia);
+                
+                System.out.println("Data completa: " + LocalDate.of(dataAno, dataMes, dataDia));
+                
+                cliente.setDtNasc(LocalDate.of(dataAno, dataMes, dataDia));
                 cliente.setCpfCliente(rst.getString("cpfCliente"));
                 cliente.setRgCliente(rst.getString("rgCliente"));
                 cliente.setFoneCliente(rst.getString("foneCliente"));

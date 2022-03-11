@@ -84,6 +84,9 @@ public class ControllerVendas implements ActionListener {
                     telaVendas.getjLabelTotal().setText("R$ " + String.valueOf(totalVenda));
                     
                 } else if (evt.getKeyCode() == KeyEvent.VK_F2) {
+                    
+                    System.out.println("cliente: " + telaVendas.getjFTFidAluno().getText());
+                    
                     VendasService vendasService = new VendasService();
                     
                     Venda venda = new Venda();
@@ -92,6 +95,9 @@ public class ControllerVendas implements ActionListener {
                     venda.setSerie(String.valueOf(serieAleatoria));
                     venda.setDataVenda(LocalDate.now());
                     venda.setTotal(totalVenda);
+                    
+                    
+                    System.out.println("cliente: " + Integer.valueOf(telaVendas.getjFTFidAluno().getText()) );
                     
                     var cliente = clienteService.buscar(Integer.valueOf(telaVendas.getjFTFidAluno().getText()));
                     venda.setCliente(cliente);

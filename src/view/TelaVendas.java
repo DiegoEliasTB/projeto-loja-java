@@ -42,54 +42,30 @@ public class TelaVendas extends javax.swing.JDialog {
         return jButtonBuscaAluno;
     }
 
-    public JButton getjButtonBuscaPersonal() {
-        return jButtonBuscaPersonal;
-    }
-
-    public JButton getjButtonBuscaProduto() {
+     public JButton getjButtonBuscaProduto() {
         return jButtonBuscaProduto;
-    }
-
-    public JTextField getjFTFBairroAluno() {
-        return jFTFBairroAluno;
     }
 
     public JTextField getjFTFCidadeAluno() {
         return jFTFCidadeAluno;
     }
 
-    public JTextField getjFTFEmailAluno() {
-        return jFTFEmailAluno;
-    }
-
     public JTextField getjFTFFoneAluno() {
         return jFTFFoneAluno;
-    }
-
-    public JTextField getjFTFNomeAluno() {
-        return jFTFNomeAluno;
-    }
-
-    public JTextField getjFTFNomePersonal() {
-        return jFTFNomePersonal;
     }
 
     public JFormattedTextField getjFTFidAluno() {
         return jFTFidAluno;
     }
 
-    public JFormattedTextField getjFTFidPersonal() {
-        return jFTFidPersonal;
-    }
-
     public JLabel getjLabelTotal() {
         return jLabelTotal;
     }
 
-    public JTable getjTable1() {
-        return jTable1;
+    public JTable getjTableItens() {
+        return jTableItens;
     }
-
+    
     public JTextField getjTextFieldBarraProduto() {
         return jTextFieldBarraProduto;
     }
@@ -124,7 +100,7 @@ public class TelaVendas extends javax.swing.JDialog {
         jLabel1 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jTableItens = new javax.swing.JTable();
         jPanel4 = new javax.swing.JPanel();
         jLabelTotal = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
@@ -137,22 +113,11 @@ public class TelaVendas extends javax.swing.JDialog {
         jLabel9 = new javax.swing.JLabel();
         jFTFidAluno = new javax.swing.JFormattedTextField();
         jButtonBuscaAluno = new javax.swing.JButton();
-        jLabel13 = new javax.swing.JLabel();
-        jFTFNomeAluno = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
         jFTFCidadeAluno = new javax.swing.JTextField();
-        jFTFBairroAluno = new javax.swing.JTextField();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jFTFEmailAluno = new javax.swing.JTextField();
         jLabel17 = new javax.swing.JLabel();
         jFTFFoneAluno = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
-        jLabel18 = new javax.swing.JLabel();
-        jFTFidPersonal = new javax.swing.JFormattedTextField();
-        jButtonBuscaPersonal = new javax.swing.JButton();
-        jLabel19 = new javax.swing.JLabel();
-        jFTFNomePersonal = new javax.swing.JTextField();
         jPanel8 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -196,7 +161,7 @@ public class TelaVendas extends javax.swing.JDialog {
 
         jPanel3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jTableItens.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -212,14 +177,14 @@ public class TelaVendas extends javax.swing.JDialog {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jTable1);
-        if (jTable1.getColumnModel().getColumnCount() > 0) {
-            jTable1.getColumnModel().getColumn(0).setMaxWidth(50);
-            jTable1.getColumnModel().getColumn(1).setMaxWidth(50);
-            jTable1.getColumnModel().getColumn(2).setMaxWidth(300);
-            jTable1.getColumnModel().getColumn(3).setMaxWidth(75);
-            jTable1.getColumnModel().getColumn(4).setMaxWidth(75);
-            jTable1.getColumnModel().getColumn(5).setMaxWidth(75);
+        jScrollPane1.setViewportView(jTableItens);
+        if (jTableItens.getColumnModel().getColumnCount() > 0) {
+            jTableItens.getColumnModel().getColumn(0).setMaxWidth(50);
+            jTableItens.getColumnModel().getColumn(1).setMaxWidth(50);
+            jTableItens.getColumnModel().getColumn(2).setMaxWidth(300);
+            jTableItens.getColumnModel().getColumn(3).setMaxWidth(75);
+            jTableItens.getColumnModel().getColumn(4).setMaxWidth(75);
+            jTableItens.getColumnModel().getColumn(5).setMaxWidth(75);
         }
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -307,7 +272,7 @@ public class TelaVendas extends javax.swing.JDialog {
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 104, Short.MAX_VALUE))
         );
 
         jPanel7.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -320,43 +285,15 @@ public class TelaVendas extends javax.swing.JDialog {
         jButtonBuscaAluno.setText("...");
         jButtonBuscaAluno.setEnabled(false);
 
-        jLabel13.setText("Nome");
-
-        jFTFNomeAluno.setText("000");
-        jFTFNomeAluno.setEnabled(false);
-
-        jLabel14.setText("Cidade");
+        jLabel14.setText("Condição de pagamento");
 
         jFTFCidadeAluno.setText("000");
         jFTFCidadeAluno.setEnabled(false);
 
-        jFTFBairroAluno.setText("000");
-        jFTFBairroAluno.setEnabled(false);
-
-        jLabel15.setText("Bairro");
-
-        jLabel16.setText("Email");
-
-        jFTFEmailAluno.setText("000");
-        jFTFEmailAluno.setEnabled(false);
-
-        jLabel17.setText("Fone");
+        jLabel17.setText("Vendedor");
 
         jFTFFoneAluno.setText("000");
         jFTFFoneAluno.setEnabled(false);
-
-        jLabel18.setText("Id Vendedor");
-
-        jFTFidPersonal.setText("000");
-        jFTFidPersonal.setEnabled(false);
-
-        jButtonBuscaPersonal.setText("...");
-        jButtonBuscaPersonal.setEnabled(false);
-
-        jLabel19.setText("Nome");
-
-        jFTFNomePersonal.setText("000");
-        jFTFNomePersonal.setEnabled(false);
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -365,34 +302,19 @@ public class TelaVendas extends javax.swing.JDialog {
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jFTFNomeAluno)
+                    .addComponent(jLabel14)
+                    .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel14)
-                            .addComponent(jSeparator1)
-                            .addGroup(jPanel7Layout.createSequentialGroup()
-                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jFTFidAluno))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButtonBuscaAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel13)
-                            .addComponent(jLabel19)
-                            .addGroup(jPanel7Layout.createSequentialGroup()
-                                .addComponent(jFTFidPersonal, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButtonBuscaPersonal, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jFTFNomePersonal, javax.swing.GroupLayout.DEFAULT_SIZE, 375, Short.MAX_VALUE)
-                            .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel16)
-                            .addComponent(jFTFEmailAluno)
-                            .addComponent(jLabel17)
-                            .addComponent(jFTFFoneAluno)
-                            .addComponent(jLabel15)
-                            .addComponent(jFTFBairroAluno)
-                            .addComponent(jFTFCidadeAluno))
-                        .addGap(0, 3, Short.MAX_VALUE)))
-                .addContainerGap())
+                            .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jFTFidAluno))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButtonBuscaAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jFTFFoneAluno, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jFTFCidadeAluno, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel17, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -403,39 +325,17 @@ public class TelaVendas extends javax.swing.JDialog {
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jFTFidAluno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonBuscaAluno))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel13)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jFTFNomeAluno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(59, 59, 59)
                 .addComponent(jLabel14)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jFTFCidadeAluno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel15)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jFTFBairroAluno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(59, 59, 59)
                 .addComponent(jLabel17)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jFTFFoneAluno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel16)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jFTFEmailAluno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(70, 70, 70)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
-                .addComponent(jLabel18)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jFTFidPersonal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonBuscaPersonal))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel19)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jFTFNomePersonal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel8.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -673,27 +573,16 @@ public class TelaVendas extends javax.swing.JDialog {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField JTFStatus;
     private javax.swing.JButton jButtonBuscaAluno;
-    private javax.swing.JButton jButtonBuscaPersonal;
     private javax.swing.JButton jButtonBuscaProduto;
-    private javax.swing.JTextField jFTFBairroAluno;
     private javax.swing.JTextField jFTFCidadeAluno;
-    private javax.swing.JTextField jFTFEmailAluno;
     private javax.swing.JTextField jFTFFoneAluno;
-    private javax.swing.JTextField jFTFNomeAluno;
-    private javax.swing.JTextField jFTFNomePersonal;
     private javax.swing.JFormattedTextField jFTFidAluno;
-    private javax.swing.JFormattedTextField jFTFidPersonal;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel3;
@@ -715,7 +604,7 @@ public class TelaVendas extends javax.swing.JDialog {
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTableItens;
     private javax.swing.JTextField jTextFieldBarraProduto;
     private javax.swing.JTextField jTextFieldData;
     private javax.swing.JTextField jTextFieldHora;

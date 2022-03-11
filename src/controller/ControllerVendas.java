@@ -14,6 +14,7 @@ public class ControllerVendas implements ActionListener {
     TelaVendas telaVendas;
     ProdutoService service = new ProdutoService();
     Long itens = 0L;
+    BigDecimal totalVenda = new BigDecimal(0L);
     
     public ControllerVendas(TelaVendas telaVendas) {
         this.telaVendas = telaVendas;
@@ -49,7 +50,8 @@ public class ControllerVendas implements ActionListener {
                     valorProduto = produto.getValor();
 
                     subTotal = valorProduto.multiply(BigDecimal.valueOf(qtdItens));
-                                                           
+                        
+                    totalVenda = totalVenda.add(subTotal);
                     
                     DefaultTableModel tabela = (DefaultTableModel) telaVendas.getjTableItens().getModel();
                     tabela.addRow(new Object[]{
@@ -60,6 +62,8 @@ public class ControllerVendas implements ActionListener {
                         valorProduto,
                         subTotal
                     });
+                    
+                    telaVendas.getjLabelTotal().setText("R$ " + String.valueOf(totalVenda));
                     
                 } else if (evt.getKeyCode() == KeyEvent.VK_F2) {
                     

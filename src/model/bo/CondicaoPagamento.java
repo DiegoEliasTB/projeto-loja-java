@@ -1,6 +1,7 @@
 package model.bo;
 
 import java.time.LocalDate;
+import java.util.Date;
 
 public class CondicaoPagamento {
 
@@ -40,16 +41,16 @@ public class CondicaoPagamento {
         return diasAtePrimeiraParcela;
     }
 
-    public void setDiasAtePrimeiraParcela(LocalDate diasAtePrimeiraParcela) {
-        this.diasAtePrimeiraParcela = diasAtePrimeiraParcela;
+    public void setDiasAtePrimeiraParcela(Date diasAtePrimeiraParcela) {
+        this.diasAtePrimeiraParcela = LocalDate.parse(diasAtePrimeiraParcela.toString());
     }
 
     public LocalDate getDiasEntreParcelas() {
         return diasEntreParcelas;
     }
 
-    public void setDiasEntreParcelas(LocalDate diasEntreParcelas) {
-        this.diasEntreParcelas = diasEntreParcelas;
+    public void setDiasEntreParcelas(Date diasEntreParcelas) {
+        this.diasEntreParcelas = LocalDate.parse(diasEntreParcelas.toString());
     }
 
     @Override

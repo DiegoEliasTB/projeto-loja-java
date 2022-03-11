@@ -47,7 +47,7 @@ public class ControllerCadCliente implements ActionListener {
             EnderecoService enderecoService = new EnderecoService();
             
             cliente.setNome(this.telaCadCliente.getjTFNome().getText());
-            cliente.setDtNasc(LocalDate.parse(this.telaCadCliente.getjFTFDtNasc().getText()));
+            cliente.setDtNasc((this.telaCadCliente.getjFTFDtNasc().getText()));
             cliente.setRgCliente(this.telaCadCliente.getjFTFRG().getText());
             cliente.setCpfCliente(this.telaCadCliente.getjFTFCPF().getText());
             cliente.setFoneCliente(this.telaCadCliente.getjFTFFone1().getText());

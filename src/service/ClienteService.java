@@ -25,7 +25,8 @@ public class ClienteService implements InterfaceService<Cliente> {
 
     @Override
     public Cliente buscar(int codigo) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        ClienteDAO dao = new ClienteDAO();
+        return dao.retrieve(codigo);
     }
 
     @Override

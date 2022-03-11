@@ -279,21 +279,12 @@ public class TelaVendas extends javax.swing.JDialog {
 
         jLabel9.setText("ID Cliente");
 
-        jFTFidAluno.setText("000");
-        jFTFidAluno.setEnabled(false);
-
         jButtonBuscaAluno.setText("...");
         jButtonBuscaAluno.setEnabled(false);
 
         jLabel14.setText("Condição de pagamento");
 
-        jFTFCidadeAluno.setText("000");
-        jFTFCidadeAluno.setEnabled(false);
-
         jLabel17.setText("Vendedor");
-
-        jFTFFoneAluno.setText("000");
-        jFTFFoneAluno.setEnabled(false);
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
